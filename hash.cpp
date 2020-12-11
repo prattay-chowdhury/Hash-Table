@@ -14,16 +14,19 @@ bool is_prime(int number){
 	bool decision=true;
 	
 	for (int i=2;i<number;i++)
+		
 		if (number%i==0) 
 		{
 			decision=false;
 			break;
 		}
+	
 	return decision;
 }
 
 int find_next_prime(int number){
 	bool decision;
+	
 	while(1)
 	{
 		if (is_prime(number))
@@ -35,8 +38,8 @@ int find_next_prime(int number){
 	return number;
 }
 
-struct node{
-  string key;
+struct node{ 
+	string key;
 };
 
 
@@ -58,6 +61,7 @@ private:
 		node_count=0;          //Data will be rehashed so node count resets
 		collision_count=0;  		//Collision count resets for new table
 		for (int i = 0; i < old_table_size; i++)
+			
 			if (old_table[i] != NULL) 
 			{
 				node* A= new node;
